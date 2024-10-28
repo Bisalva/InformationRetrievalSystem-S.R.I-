@@ -1,4 +1,4 @@
-# Sistema de Recuperacion de Informacion
+# Sistema de Recuperacion de Informacion (S.R.I)
 
 Repositorio privado dedicado al proyecto #3 de Estructura de Datos
 
