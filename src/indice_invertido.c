@@ -27,7 +27,7 @@ void convertir_a_minusculas(char *palabra) {
 int cargar_stopwords(const char *nombre_archivo, char stopwords[][MAX_WORD_LENGTH]) {
     FILE *archivo = fopen(nombre_archivo, "r");
     if (archivo == NULL) {
-        printf("no se pudo abrir el archivo de stopwords.\n");
+        printf("Error al abrir el archivo de stopwords.\n");
         return 0;
     }
 
@@ -98,7 +98,7 @@ void mostrar_vista_previa(const char *nombre_archivo, const char *palabra_origin
 
     FILE *file = fopen(ruta_completa, "r");
     if (file == NULL) {
-        perror("error al abrir el archivo para vista previa");
+        perror("Error al abrir el archivo para vista previa.");
         return;
     }
 
@@ -117,7 +117,8 @@ void mostrar_vista_previa(const char *nombre_archivo, const char *palabra_origin
         convertir_a_minusculas(linea_minusculas);
 
         if (strstr(linea_minusculas, palabra_min) != NULL) {
-            printf("    vista previa: %s", linea);
+            printf("    \"%s\"", linea);
+            printf("\n");
             contador++;
             if (contador >= 3) break;
         }
@@ -138,14 +139,14 @@ void buscar_palabra(IndiceInvertido *indice, const char *palabra_original) {
 
     int encontrada = 0;
 
-    printf("buscando la palabra \"%s\":\n", palabra_original);
+    printf("Buscando la palabra \"%s\":\n", palabra_original);
 
     while (nodo_palabra != NULL) {
         if (strcmp(nodo_palabra->palabra, palabra) == 0) {
-            printf("\ndocumentos que contienen la palabra \"%s\":\n", palabra_original);
+            printf("\nDocumentos que contienen la palabra \"%s\":\n", palabra_original);
             DocumentoNodo *doc_nodo = nodo_palabra->documentos;
             while (doc_nodo != NULL) {
-                printf("  - %s (frecuencia: %d)\n", doc_nodo->nombre_archivo, doc_nodo->frecuencia);
+                printf("  - %s (Frecuencia: %d)\n", doc_nodo->nombre_archivo, doc_nodo->frecuencia);
                 mostrar_vista_previa(doc_nodo->nombre_archivo, palabra);
                 doc_nodo = doc_nodo->siguiente;
             }
@@ -156,7 +157,7 @@ void buscar_palabra(IndiceInvertido *indice, const char *palabra_original) {
     }
 
     if (!encontrada) {
-        printf("\nla palabra \"%s\" no se encontro en ningun documento.\n", palabra_original);
+        printf("\nLa palabra \"%s\" no se encontro en ningun documento.\n", palabra_original);
     }
     printf("\n");
 }

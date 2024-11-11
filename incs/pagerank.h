@@ -21,4 +21,3 @@ void calculate_pagerank(Node *nodes[], int node_count, double damping_factor, in
 void free_nodes(Node *nodes[], int node_count);
 
 #endif
-

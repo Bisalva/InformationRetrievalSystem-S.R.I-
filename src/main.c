@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     char stopwords[MAX_STOPWORDS][MAX_WORD_LENGTH];
     int num_stopwords = cargar_stopwords("docs/stopwords.txt", stopwords);
     if (num_stopwords == 0) {
-        printf("no se cargaron stopwords.\n");
+        printf("No se cargaron los stopwords.\n");
         return 1;
     }
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     DIR *dir = opendir(carpeta); 
 
     if (dir == NULL) {
-        perror("no se pudo abrir el directorio");
+        perror("No se pudo abrir el directorio.");
         return 1;
     }
 
@@ -57,11 +57,11 @@ int main(int argc, char *argv[]) {
         convertir_a_minusculas(palabra_a_buscar);
 
         if (es_stopword(palabra_a_buscar, stopwords, num_stopwords)) {
-            printf("\"%s\" es un stopword, omitiendo busqueda\n", palabra_a_buscar);
+            printf("\"%s\" es un stopword. Omitiendo busqueda...\n", palabra_a_buscar);
             continue;
         }
 
-        printf("\n\n=== resultados para \"%s\" ===\n", palabra_a_buscar);
+        printf("\n\n=== RESULTADOS PARA \"%s\" ===\n", palabra_a_buscar);
         buscar_palabra(&indice, palabra_a_buscar);
     }
 

@@ -34,7 +34,7 @@ char* leer_archivo(const char *archivo){
     char *contenido = malloc(MAX_ARCHIVO_MB);
     
     if (contenido == NULL) {
-        perror("No se pudo reservar memoria");
+        perror("No se pudo reservar memoria.");
         fclose(archivo_input);
         return NULL;
     }
@@ -50,14 +50,14 @@ char* leer_archivo(const char *archivo){
 Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *contenido){
     Nodo *nuevo_nodo = malloc(sizeof(Nodo));
     if (nuevo_nodo == NULL) {
-        perror("No se pudo reservar memoria para un nuevo nodo");
+        perror("No se pudo reservar memoria para un nuevo nodo.");
         return inicio; //vuelve al inicio la lista
     }
 
     // guarda memoria para el nombre del archivo
     nuevo_nodo->nombre_archivo = malloc(strlen(nombre_archivo) + 1);
     if (nuevo_nodo->nombre_archivo == NULL) {
-        perror("No se pudo reservar memoria para el nombre del archivo");
+        perror("No se pudo reservar memoria para el nombre del archivo.");
         free(nuevo_nodo);
         return inicio;
     }
@@ -66,7 +66,7 @@ Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *conteni
     // guarda memoria para el contenido y copiarlo
     nuevo_nodo->contenido = malloc(strlen(contenido) + 1);
     if (nuevo_nodo->contenido == NULL) {
-        perror("No se pudo reservar memoria para el contenido del archivo");
+        perror("No se pudo reservar memoria para el contenido del archivo.");
         free(nuevo_nodo->nombre_archivo);
         free(nuevo_nodo);
         return inicio;

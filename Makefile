@@ -1,5 +1,5 @@
 CC=gcc
-EXEC=program.out
+EXEC=sri
 GRUPO=G1
 NTAR=2
 
@@ -24,6 +24,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 clean:
 	rm -f $(OBJ_FILES)
 	rm -f build/$(EXEC)
+	rm -rf build obj
 
 folders:
 	mkdir -p src obj incs build docs
