@@ -1,6 +1,4 @@
 **Por hacer**
-- Limitar linea maxima de previ.
-- Error simbolos al final de la linea
 - Limitaciones y Errores presentarlos mas bonitos
 - Agregar extensiones mas comunes
 
