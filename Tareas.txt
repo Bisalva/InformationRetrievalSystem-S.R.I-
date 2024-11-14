@@ -1,8 +1,7 @@
 **Por hacer**
-- Limitaciones y Errores presentarlos mas bonitos
-- Agregar extensiones mas comunes
-
-
+- 2do grafo ( fran )
+- Mas testeos de archivos y parametros
+- Mas extenxiones permitidas
 
 
 
