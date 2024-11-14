@@ -2,7 +2,9 @@
 - 2do grafo ( fran )
 - Mas testeos de archivos y parametros
 - Mas extenxiones permitidas
-- Revisar manipulacion correcta de la memoria
+- Revisar manipulacion correcta de la memoria (rubrica)
+- Modular el codigo (rubrica) : Posiblemente separar mas funciones en .h
+- Comentarios en los codigos ( cada parte responsable de su propio codigo)
 
 
 
