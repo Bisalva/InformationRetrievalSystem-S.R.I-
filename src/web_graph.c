@@ -10,7 +10,7 @@ AdjListNode* create_adj_list_node(int dest) {
     return newNode;
 }
 
-//crear el grafo
+//crear grafo
 Graph* create_graph(int num_docs) {
     Graph *graph = (Graph*)malloc(sizeof(Graph));
     graph->num_docs = num_docs;
@@ -18,7 +18,7 @@ Graph* create_graph(int num_docs) {
     //crear arreglo con lista de adyacencia
     graph->array = (AdjList*)malloc(num_docs * sizeof(AdjList));
 
-    //inicializar arista
+    //inicializar aristas
     for (int i = 0; i < num_docs; i++) {
         graph->array[i].document_id = i;
         graph->array[i].head = NULL;
@@ -28,9 +28,24 @@ Graph* create_graph(int num_docs) {
 
 //funcion agregar arista
 void add_link(Graph *graph, int src, int dest) {
+    if (src >= graph->num_docs || dest >= graph->num_docs) {
+        printf("Error: Nodo fuera de rango.\n");
+        return;
+    }
     AdjListNode *newNode = create_adj_list_node(dest);
     newNode->next = graph->array[src].head;
     graph->array[src].head = newNode;
+}
+
+//funcion para conectar dos grafos
+void connect_graphs(Graph *graph1, Graph *graph2, int src, int dest) {
+    if (src >= graph1->num_docs || dest >= graph2->num_docs) {
+        printf("Error: Nodo fuera de rango.\n");
+        return;
+    }
+    AdjListNode *newNode = create_adj_list_node(dest + graph1->num_docs);
+    newNode->next = graph1->array[src].head;
+    graph1->array[src].head = newNode;
 }
 
 //funcion mostrar grafo

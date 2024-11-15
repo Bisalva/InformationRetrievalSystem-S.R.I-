@@ -15,14 +15,16 @@ typedef struct AdjList {
 
 //estructura grafo
 typedef struct Graph {
-    int num_docs;        //num documentos
-    AdjList *array;      //arreglo con las listas de adyacencia
+    int num_docs;
+    AdjList *array;
 } Graph;
 
 //funciones gestion grafo
 Graph* create_graph(int num_docs);
 void add_link(Graph *graph, int src, int dest);
+void connect_graphs(Graph *graph1, Graph *graph2, int src, int dest);
 void display_graph(Graph *graph);
 void free_graph(Graph *graph);
 
 #endif
+
