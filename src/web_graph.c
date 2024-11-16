@@ -28,25 +28,42 @@ Graph* create_graph(int num_docs) {
 
 //funcion agregar arista
 void add_link(Graph *graph, int src, int dest) {
-    if (src >= graph->num_docs || dest >= graph->num_docs) {
-        printf("Error: Nodo fuera de rango.\n");
+    if (src < 0 || src >= graph->num_docs || dest < 0 || dest >= graph->num_docs) {
+        fprintf(stderr, "Error: enlace inválido (%d -> %d).\n", src, dest);
         return;
     }
+
+    // Verificar si ya existe el enlace
+    AdjListNode *current = graph->array[src].head;
+    while (current != NULL) {
+        if (current->dest == dest) {
+            return;  // Enlace ya existe
+        }
+        current = current->next;
+    }
+
+    // Agregar enlace si no existe
     AdjListNode *newNode = create_adj_list_node(dest);
     newNode->next = graph->array[src].head;
     graph->array[src].head = newNode;
 }
 
+
+
 //funcion para conectar dos grafos
 void connect_graphs(Graph *graph1, Graph *graph2, int src, int dest) {
-    if (src >= graph1->num_docs || dest >= graph2->num_docs) {
-        printf("Error: Nodo fuera de rango.\n");
+    if (src < 0 || src >= graph1->num_docs || dest < 0 || dest >= graph2->num_docs) {
+        fprintf(stderr, "Error: Nodo fuera de rango al conectar grafos (%d -> %d).\n", src, dest);
         return;
     }
-    AdjListNode *newNode = create_adj_list_node(dest + graph1->num_docs);
+
+    // Conectar usando el índice destino real de Web 2
+    AdjListNode *newNode = create_adj_list_node(dest);
     newNode->next = graph1->array[src].head;
     graph1->array[src].head = newNode;
 }
+
+
 
 //funcion mostrar grafo
 void display_graph(Graph *graph) {
@@ -73,4 +90,17 @@ void free_graph(Graph *graph) {
     }
     free(graph->array);
     free(graph);
+}
+
+void debug_graph(Graph *graph, const char *graph_name) {
+    printf("\nDebugging %s:\n", graph_name);
+    for (int i = 0; i < graph->num_docs; i++) {
+        printf("Document %d:", i);
+        AdjListNode *node = graph->array[i].head;
+        while (node) {
+            printf(" -> %d", node->dest);
+            node = node->next;
+        }
+        printf("\n");
+    }
 }
