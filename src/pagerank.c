@@ -19,17 +19,18 @@ void add_inlink(Node *node, int source_id) {
 }
 
 // Establecer relevancia basada en palabras clave
-void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[], int keyword_count) {
+void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[], int keyword_count, const char *documents[]) {
     for (int i = 0; i < node_count; i++) {
         nodes[i]->keyword_relevance = 0.0; // Reiniciar relevancia
         // Simular búsqueda de palabras clave en documentos
         for (int j = 0; j < keyword_count; j++) {
-            if (/* Documento i contiene keywords[j] */) {
+            if (strstr(documents[i], keywords[j]) != NULL) {
                 nodes[i]->keyword_relevance += 1.0; // Incrementar relevancia
             }
         }
     }
 }
+
 
 void calculate_pagerank(Node *nodes[], int node_count, double damping_factor, int iterations) {
     double base_rank = (1.0 - damping_factor) / node_count;
