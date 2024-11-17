@@ -8,18 +8,19 @@
 
 // Verifica la extension del archivo
 int verificar_extension_archivo(const char *nombre_archivo){
+    //Se agregan las extensiones a utilizar
     const char *extensiones_texto[] = {".txt", ".md", ".csv", ".log", ".ini", ".conf", ".rst", ".doc", ".docx",".pdf",".tex", NULL};
-    size_t len_nombre = strlen(nombre_archivo); //tamaño del nombre del archivo
+    size_t len_nombre = strlen(nombre_archivo);
 
     for (int i = 0; extensiones_texto[i] != NULL; i++) {
-        size_t len_extension = strlen(extensiones_texto[i]); // tamaño de la extension
+        size_t len_extension = strlen(extensiones_texto[i]);
         //Si termina en alguna extension de "extensiones_texto"
         if (len_nombre > len_extension && strcmp(nombre_archivo + len_nombre - len_extension, extensiones_texto[i]) == 0) {
-            return 1;  // Si tiene una extension de "extensiones_texto"
+            return 1;
         }
     }
 
-    return 0;  // No tiene una extension nombrada
+    return 0;// No tiene una extension nombrada
 }
 
 // Lee el archivo
@@ -40,13 +41,13 @@ char* leer_archivo(const char *archivo){
     }
 
     size_t tamano_leido = fread(contenido, 1, MAX_ARCHIVO_MB - 1, archivo_input);
-    contenido[tamano_leido] = '\0';  // revisa si el archivo termino
+    contenido[tamano_leido] = '\0';
 
     fclose(archivo_input);
     return contenido;
 }
 
-
+//Agrega nuevos nodos
 Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *contenido){
     Nodo *nuevo_nodo = malloc(sizeof(Nodo));
     if (nuevo_nodo == NULL) {
@@ -54,7 +55,7 @@ Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *conteni
         return inicio; //vuelve al inicio la lista
     }
 
-    // guarda memoria para el nombre del archivo
+    // guarda memoria para el nombre del doc
     nuevo_nodo->nombre_archivo = malloc(strlen(nombre_archivo) + 1);
     if (nuevo_nodo->nombre_archivo == NULL) {
         perror("No se pudo reservar memoria para el nombre del archivo.");
@@ -63,7 +64,7 @@ Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *conteni
     }
     strcpy(nuevo_nodo->nombre_archivo, nombre_archivo);
 
-    // guarda memoria para el contenido y copiarlo
+    //guarda memoria para el contenido del doc y copiarlo
     nuevo_nodo->contenido = malloc(strlen(contenido) + 1);
     if (nuevo_nodo->contenido == NULL) {
         perror("No se pudo reservar memoria para el contenido del archivo.");
@@ -75,7 +76,7 @@ Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *conteni
 
     nuevo_nodo->siguiente = NULL;
 
-    // Lista vacia = vuelve al primer nodo
+    //lista vacia = vuelve al primer nodo
     if (inicio == NULL) {
         return nuevo_nodo;
     }
@@ -89,6 +90,7 @@ Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *conteni
     return inicio;
 }
 
+//Gestion de memoria
 void liberar_memoria(Nodo *inicio){
     Nodo *temp;
     while (inicio != NULL) {
