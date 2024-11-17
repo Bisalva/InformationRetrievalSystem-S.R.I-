@@ -6,7 +6,7 @@ Node* create_node(int out_links) {
     Node *node = (Node*)malloc(sizeof(Node));
     node->pagerank = 1.0;
     node->out_links = out_links;
-    node->keyword_relevance = 0.0; // Inicializar la relevancia
+    node->keyword_relevance = 0.0; //inicializar la relevancia
     node->in_links = NULL;
     return node;
 }
@@ -18,14 +18,14 @@ void add_inlink(Node *node, int source_id) {
     node->in_links = new_inlink;
 }
 
-// Establecer relevancia basada en palabras clave
+//establecer relevancia basada en palabras clave
 void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[], int keyword_count, const char *documents[]) {
     for (int i = 0; i < node_count; i++) {
-        nodes[i]->keyword_relevance = 0.0; // Reiniciar relevancia
-        // Simular búsqueda de palabras clave en documentos
+        nodes[i]->keyword_relevance = 0.0; //reiniciar relevancia
+        //simular búsqueda de palabras clave en documentos
         for (int j = 0; j < keyword_count; j++) {
             if (strstr(documents[i], keywords[j]) != NULL) {
-                nodes[i]->keyword_relevance += 1.0; // Incrementar relevancia
+                nodes[i]->keyword_relevance += 1.0; //incrementar relevancia
             }
         }
     }
@@ -40,16 +40,16 @@ void calculate_pagerank(Node *nodes[], int node_count, double damping_factor, in
             double rank_sum = 0.0;
             InLinkNode *inlink = nodes[i]->in_links;
 
-            // Calcular suma PageRank
+            //calcular suma PageRank
             while (inlink != NULL) {
                 int source_id = inlink->node_id;
                 rank_sum += nodes[source_id]->pagerank / nodes[source_id]->out_links;
                 inlink = inlink->next;
             }
 
-            // Actualizar PageRank con ponderación de relevancia
+            //actualizar PageRank con ponderacion de relevancia
             nodes[i]->pagerank = base_rank + damping_factor * rank_sum;
-            nodes[i]->pagerank *= (1.0 + nodes[i]->keyword_relevance); // Ajustar por relevancia
+            nodes[i]->pagerank *= (1.0 + nodes[i]->keyword_relevance); //ajustar por relevancia
         }
     }
 }
