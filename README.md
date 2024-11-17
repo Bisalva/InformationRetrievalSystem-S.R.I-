@@ -11,7 +11,7 @@ Repositorio dedicado al proyecto #3 de Estructura de Datos
 
 **Roles**
 - Duvan Figueroa = Índice Invertido
-- Francisco Mercado = Grafos y Funcionamiento
+- Francisco Mercado = Grafos, Funcionamiento y PageRank
 - Diego Galindo = Merge de las partes de los roles / Optimización
 - Benjamin Sanhueza = Documentos y Estructuras
 
