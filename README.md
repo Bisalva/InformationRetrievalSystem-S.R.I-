@@ -10,10 +10,10 @@ Repositorio dedicado al proyecto #3 de Estructura de Datos
 - Cada rol inicialmente corresponde a una parte del trabajo que deberá llevar a cabo cada integrante, igualmente estos roles pueden ir variando según las necesidades del trabajo o avance.
 
 **Roles**
-- Duvan Figueroa = Índice Invertido , Stopwords , Funcionamiento
-- Francisco Mercado = Grafos, Funcionamiento y PageRank
-- Diego Galindo = Merge de las partes de los roles / Optimización
-- Benjamin Sanhueza = Ingreso de Documentos, Estructuras y Listas
+- Duvan Figueroa = Índice Invertido , Stopwords , Funcionamiento.
+- Francisco Mercado = Grafos, Funcionamiento y PageRank.
+- Diego Galindo = Merge de las partes de los roles / Optimización.
+- Benjamin Sanhueza = Ingreso de Documentos, Estructuras y Listas.
 
 **Plan de Trabajo Final**
 - Cada integrante trabajo de manera acertada y comprometida, cumpliendo con cada rol ya mencionado, inclusive cada integrante se ayudo mutuamente en diversos aspectos del programa.
