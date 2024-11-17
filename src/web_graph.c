@@ -33,7 +33,7 @@ void add_link(Graph *graph, int src, int dest) {
         return;
     }
 
-    // Verificar si ya existe el enlace
+    //verificar si ya existe el enlace
     AdjListNode *current = graph->array[src].head;
     while (current != NULL) {
         if (current->dest == dest) {
@@ -42,7 +42,7 @@ void add_link(Graph *graph, int src, int dest) {
         current = current->next;
     }
 
-    // Agregar enlace si no existe
+    //agregar enlace si no existe
     AdjListNode *newNode = create_adj_list_node(dest);
     newNode->next = graph->array[src].head;
     graph->array[src].head = newNode;
@@ -57,7 +57,7 @@ void connect_graphs(Graph *graph1, Graph *graph2, int src, int dest) {
         return;
     }
 
-    // Conectar usando el índice destino real de Web 2
+    //conectar usando el indice destino real de Web 2
     AdjListNode *newNode = create_adj_list_node(dest);
     newNode->next = graph1->array[src].head;
     graph1->array[src].head = newNode;
