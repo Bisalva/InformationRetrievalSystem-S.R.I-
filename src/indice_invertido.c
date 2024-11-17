@@ -42,7 +42,7 @@ void limpiar_palabra(char *palabra) {
         palabra[longitud] = '\0';  
     }
 }
-
+// carga las stopwords desde un archivo a un arreglo
 int cargar_stopwords(const char *nombre_archivo, char stopwords[][MAX_WORD_LENGTH]) {
     FILE *archivo = fopen(nombre_archivo, "r");
     if (archivo == NULL) {
@@ -144,7 +144,7 @@ void mostrar_vista_previa(const char *nombre_archivo, const char *palabra_origin
     fclose(file);
     printf("\n");
 }
-
+// agrega una palabra al indice invertido
 void agregar_palabra(IndiceInvertido *indice, const char *palabra_original, const char *nombre_archivo) {
     char palabra[512];
     strncpy(palabra, palabra_original, sizeof(palabra) - 1);
@@ -171,7 +171,7 @@ void agregar_palabra(IndiceInvertido *indice, const char *palabra_original, cons
 
     agregar_documento(nodo_palabra, nombre_archivo);
 }
-
+// busca una palabra en el indice invertido y muestra los documentos donde aparece
 void buscar_palabra(IndiceInvertido *indice, const char *palabra_original) {
     char palabra[512];
     strncpy(palabra, palabra_original, sizeof(palabra) - 1);
