@@ -1,11 +1,10 @@
 # Sistema de Recuperacion de Informacion (S.R.I)
 
-- **Profesor : Jose Canuman**
-- **Integrantes : Benjamin Sanhueza, Duvan Figueroa , Francisco Mercado , Diego Galindo**
-
-
 > [!NOTE]
 > Para usar el buscador se debe escribir la palabra a buscar de manera gramaticalmente correcta.
+
+- **Profesor : Jose Canuman**
+- **Integrantes : Benjamin Sanhueza, Duvan Figueroa , Francisco Mercado , Diego Galindo**
 
 **Plan de Trabajo Inicial**
 - Analizamos las instrucciones y desmenuzamos en categorías de funcionalidades para otorgar a cada integrante un rol.
