@@ -29,7 +29,7 @@ int main() {
     char palabras[MAX_WORDS][MAX_WORD_LENGTH];
     int total_palabras;
 
-    char archivo_fuente[] = "palabras.txt"; //archivo de entrada
+    char archivo_fuente[] = "palabras.txt"; 
     total_palabras = leer_palabras(archivo_fuente, palabras);
 
     if (total_palabras == -1) {
@@ -55,7 +55,7 @@ int main() {
     return 0;
 }
 
-//funcion para generar un documento con palabras aleatorias
+
 void generar_documento(const char *nombre_archivo, char palabras[MAX_WORDS][MAX_WORD_LENGTH], int total_palabras, int palabras_por_documento) {
     FILE *archivo = fopen(nombre_archivo, "w");
     if (!archivo) {
@@ -64,7 +64,7 @@ void generar_documento(const char *nombre_archivo, char palabras[MAX_WORDS][MAX_
     }
 
     for (int i = 0; i < palabras_por_documento; i++) {
-        int indice = rand() % total_palabras; //seleccion aleatoria de palabra
+        int indice = rand() % total_palabras; // Seleccion aleatoria de palabras
         fprintf(archivo, "%s\n", palabras[indice]);
     }
 
