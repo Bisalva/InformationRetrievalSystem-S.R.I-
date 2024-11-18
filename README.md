@@ -3,8 +3,8 @@
 - **Profesor : Jose Canuman**
 - **Integrantes : Benjamin Sanhueza, Duvan Figueroa , Francisco Mercado , Diego Galindo**
 
-  >[!NOTE]
-  >Para usar el buscador se debe escribir la palabra a buscar de manera gramaticalmente correcta.
+  > [!NOTE]
+  > Para usar el buscador se debe escribir la palabra a buscar de manera gramaticalmente correcta.
 
 **Plan de Trabajo Inicial**
 - Analizamos las instrucciones y desmenuzamos en categorías de funcionalidades para otorgar a cada integrante un rol.
