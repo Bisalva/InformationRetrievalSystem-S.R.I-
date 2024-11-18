@@ -12,7 +12,7 @@ Repositorio dedicado al proyecto #3 de Estructura de Datos
 **Roles**
 - Duvan Figueroa = Índice Invertido , Stopwords , Funcionamiento.
 - Francisco Mercado = Grafos, Funcionamiento y PageRank.
-- Diego Galindo = Merge de las partes de los roles / Optimización.
+- Diego Galindo = Merge, Optimizacion, Modulacion
 - Benjamin Sanhueza = Ingreso de Documentos, Estructuras y Listas.
 
 **Plan de Trabajo Final**
