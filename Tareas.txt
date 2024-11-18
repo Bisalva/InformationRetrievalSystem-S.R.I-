@@ -1,8 +1,2 @@
 **Por hacer**
-- Modular el codigo (rubrica) : Posiblemente separar mas funciones en .h
-
-
-
-
-
 - Latex / Informe

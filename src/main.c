@@ -2,10 +2,20 @@
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
-#include "datos_input.h"
 #include "indice_invertido.h"
-#include "web_graph.h"
+#include "stopwords.h"
+#include "index_management.h"
+#include "index_operations.h"
 #include "pagerank.h"
+#include "graph_links.h"
+#include "graph_management.h"
+#include "files.h"
+#include "word_processing.h"
+#include "nodes.h"
+#include "node_management.h"
+#include "hash_utils.h"
+#include "memory.h"
+#include "docs_management.h"
 
 #define DAMPING_FACTOR 0.85
 #define ITERATIONS 20
@@ -145,9 +155,6 @@ int main(int argc, char *argv[]) {
             node = node->next;
         }
     }
-
-    debug_graph(web1, "Web 1");
-    debug_graph(web2, "Web 2");
 
 
     // Calcular PageRank

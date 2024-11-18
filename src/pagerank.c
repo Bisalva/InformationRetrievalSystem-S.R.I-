@@ -1,24 +1,8 @@
 #include "pagerank.h"
+#include "node_management.h"
 #include <stdlib.h>
 #include <string.h>
 
-Node* create_node(int out_links) {
-    Node *node = (Node*)malloc(sizeof(Node));
-    node->pagerank = 1.0;
-    node->out_links = out_links;
-    node->keyword_relevance = 0.0; //inicializar la relevancia
-    node->in_links = NULL;
-    return node;
-}
-
-void add_inlink(Node *node, int source_id) {
-    InLinkNode *new_inlink = (InLinkNode*)malloc(sizeof(InLinkNode));
-    new_inlink->node_id = source_id;
-    new_inlink->next = node->in_links;
-    node->in_links = new_inlink;
-}
-
-//establecer relevancia basada en palabras clave
 void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[], int keyword_count, const char *documents[]) {
     for (int i = 0; i < node_count; i++) {
         nodes[i]->keyword_relevance = 0.0; //reiniciar relevancia
@@ -30,7 +14,6 @@ void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[]
         }
     }
 }
-
 
 void calculate_pagerank(Node *nodes[], int node_count, double damping_factor, int iterations) {
     double base_rank = (1.0 - damping_factor) / node_count;
@@ -51,17 +34,5 @@ void calculate_pagerank(Node *nodes[], int node_count, double damping_factor, in
             nodes[i]->pagerank = base_rank + damping_factor * rank_sum;
             nodes[i]->pagerank *= (1.0 + nodes[i]->keyword_relevance); //ajustar por relevancia
         }
-    }
-}
-
-void free_nodes(Node *nodes[], int node_count) {
-    for (int i = 0; i < node_count; i++) {
-        InLinkNode *inlink = nodes[i]->in_links;
-        while (inlink) {
-            InLinkNode *temp = inlink;
-            inlink = inlink->next;
-            free(temp);
-        }
-        free(nodes[i]);
     }
 }
