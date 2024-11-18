@@ -5,6 +5,8 @@
 
 >[!NOTE]
 >**Extra** : Se creo un programa generador de texto llamado "wordgenerator" , el cual creara cierta cantidad de archivos txt y se almacenaran en la carpeta "/docs".
+
+>[!NOTE]
 >**WordGenerator** : De fuente de palabras se usa un archivo txt lleno de palabras ya establezidas, donde al ejecutar el programa se podra seleccionar la cantidad 
 de archivos txt a generar y WordGenerator creara esa cantidad de archivos usando las palabras ya establezidas en "palabras.txt", asi generando la cantidad deseadas de 
 archivos txt sin la necesidad de buscar archivos externos para poner a prueba el programa "SRI".
