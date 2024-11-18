@@ -1,8 +1,5 @@
 **Por hacer**
-- Mas testeos de archivos y parametros
-- Revisar manipulacion correcta de la memoria (rubrica)
 - Modular el codigo (rubrica) : Posiblemente separar mas funciones en .h
-- Comentarios en los codigos ( cada parte responsable de su propio codigo)
 
 
 
