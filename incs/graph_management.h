@@ -1,9 +1,8 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #ifndef GRAPH_MANAGEMENT_H
 #define GRAPH_MANAGEMENT_H
 
 #include "adj_list.h"
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 typedef struct Graph {
     int num_docs;

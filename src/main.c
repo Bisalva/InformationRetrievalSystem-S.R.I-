@@ -1,3 +1,4 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,7 +22,6 @@
 #define ITERATIONS 20
 #define TOTAL_DOCS 10
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {

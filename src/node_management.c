@@ -1,8 +1,7 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <stdlib.h>
 #include <string.h>
 #include "node_management.h"
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 Node* create_node(int out_links) {
     Node *node = (Node*)malloc(sizeof(Node));

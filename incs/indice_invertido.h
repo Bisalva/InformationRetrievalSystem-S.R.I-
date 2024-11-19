@@ -1,3 +1,4 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #ifndef INDICE_INVERTIDO_H
 #define INDICE_INVERTIDO_H
 
@@ -7,7 +8,6 @@
 
 #define TAMANO_TABLA 1000
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 typedef struct DocumentoNodo {
     char *nombre_archivo;

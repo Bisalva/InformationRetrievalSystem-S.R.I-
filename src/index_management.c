@@ -1,7 +1,7 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <ctype.h>
 #include "index_management.h"
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 void inicializar_indice(IndiceInvertido *indice) {
     for (int i = 0; i < TAMANO_TABLA; i++) {

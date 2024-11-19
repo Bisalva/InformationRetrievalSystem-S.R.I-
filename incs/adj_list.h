@@ -1,7 +1,6 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #ifndef ADJ_LIST_H
 #define ADJ_LIST_H
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 // Nodo de la lista de adyacencia
 typedef struct AdjListNode {

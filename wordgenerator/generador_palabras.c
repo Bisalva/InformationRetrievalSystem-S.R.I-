@@ -1,3 +1,4 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,8 +6,6 @@
 
 #define MAX_WORDS 1000
 #define MAX_WORD_LENGTH 100
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 //funcion leer palabras desde un archivo
 int leer_palabras(const char *nombre_archivo, char palabras[MAX_WORDS][MAX_WORD_LENGTH]) {

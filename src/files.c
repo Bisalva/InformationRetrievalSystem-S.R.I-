@@ -1,11 +1,10 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
 #include "files.h"
 #define MAX_ARCHIVO_MB 104857600 // Tamaño máximo de archivo = 100MB
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 // Verifica la extension del archivo
 int verificar_extension_archivo(const char *nombre_archivo){

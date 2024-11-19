@@ -1,9 +1,9 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include "pagerank.h"
 #include "node_management.h"
 #include <stdlib.h>
 #include <string.h>
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 void set_keyword_relevance(Node *nodes[], int node_count, const char *keywords[], int keyword_count, const char *documents[]) {
     for (int i = 0; i < node_count; i++) {

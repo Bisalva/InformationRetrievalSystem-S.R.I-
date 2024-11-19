@@ -1,8 +1,8 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <ctype.h>
 #include "docs_management.h"
 #include "word_processing.h"
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 void agregar_documento(PalabraNodo *nodo_palabra, const char *nombre_archivo) {
     DocumentoNodo *doc_nodo = nodo_palabra->documentos;

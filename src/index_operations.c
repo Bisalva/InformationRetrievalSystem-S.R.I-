@@ -1,10 +1,9 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #include <ctype.h>
 #include "index_operations.h"
 #include "word_processing.h"
 #include "docs_management.h"
 #include "hash_utils.h"
-
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 void agregar_palabra(IndiceInvertido *indice, const char *palabra_original, const char *nombre_archivo) {
     char palabra[512];

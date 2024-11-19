@@ -1,3 +1,4 @@
+/* @Authors : Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 #ifndef NODE_MANAGEMENT_H
 #define NODE_MANAGEMENT_H
 
@@ -13,7 +14,6 @@ typedef struct Node {
     InLinkNode *in_links;
 } Node;
 
-/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
 
 Node* create_node(int out_links);
 void add_inlink(Node *node, int source_id);
