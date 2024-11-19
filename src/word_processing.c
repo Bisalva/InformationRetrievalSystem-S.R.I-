@@ -1,6 +1,8 @@
 #include <ctype.h>
 #include "word_processing.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 void convertir_a_minusculas(char *palabra) {
     for (int i = 0; palabra[i]; i++) {
         palabra[i] = tolower((unsigned char)palabra[i]);

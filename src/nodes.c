@@ -4,6 +4,8 @@
 #include <dirent.h>
 #include "nodes.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *contenido){
     Nodo *nuevo_nodo = malloc(sizeof(Nodo));
     if (nuevo_nodo == NULL) {

@@ -7,6 +7,8 @@
 
 #define TAMANO_TABLA 1000
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 typedef struct DocumentoNodo {
     char *nombre_archivo;
     int frecuencia;

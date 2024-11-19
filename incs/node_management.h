@@ -13,6 +13,8 @@ typedef struct Node {
     InLinkNode *in_links;
 } Node;
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 Node* create_node(int out_links);
 void add_inlink(Node *node, int source_id);
 void free_nodes(Node *nodes[], int node_count);

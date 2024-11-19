@@ -7,6 +7,8 @@ typedef struct Nodo {
     struct Nodo *siguiente;
 } Nodo;
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 Nodo* agregar_nodo(Nodo *inicio, const char *nombre_archivo, const char *contenido);
 
 #endif

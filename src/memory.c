@@ -5,6 +5,8 @@
 #include "memory.h"
 #include "nodes.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 void liberar_memoria(Nodo *inicio){
     Nodo *temp;
     while (inicio != NULL) {

@@ -3,6 +3,8 @@
 #include "graph_management.h"
 #include "graph_links.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 Graph* create_graph(int num_docs) {
     Graph *graph = (Graph*)malloc(sizeof(Graph));
     graph->num_docs = num_docs;

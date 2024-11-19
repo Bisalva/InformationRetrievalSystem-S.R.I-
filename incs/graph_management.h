@@ -3,6 +3,8 @@
 
 #include "adj_list.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 typedef struct Graph {
     int num_docs;
     AdjList *array;

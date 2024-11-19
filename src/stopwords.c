@@ -4,6 +4,8 @@
 #include <string.h>
 #include "stopwords.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 // carga las stopwords desde un archivo a un arreglo
 int cargar_stopwords(const char *nombre_archivo, char stopwords[][MAX_WORD_LENGTH]) {
     FILE *archivo = fopen(nombre_archivo, "r");

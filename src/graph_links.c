@@ -3,6 +3,8 @@
 #include "graph_links.h"
 #include "graph_management.h"
 
+/* Diego Galindo, Francisco Mercado, Benjamin Sanhueza, Duvan Figueroa */
+
 AdjListNode* create_adj_list_node(int dest) {
     AdjListNode *newNode = (AdjListNode*)malloc(sizeof(AdjListNode));
     newNode->dest = dest;
