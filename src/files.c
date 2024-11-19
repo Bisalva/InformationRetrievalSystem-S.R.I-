@@ -9,7 +9,7 @@
 // Verifica la extension del archivo
 int verificar_extension_archivo(const char *nombre_archivo){
     
-    const char *extensiones_texto[] = {".txt", ".md", ".csv", ".log", ".ini", ".conf", ".rst", ".doc", ".docx",".pdf",".tex", NULL};
+    const char *extensiones_texto[] = {".txt", ".md", ".csv", ".log", ".ini", ".conf", ".rst", NULL};
     size_t len_nombre = strlen(nombre_archivo);
 
     for (int i = 0; extensiones_texto[i] != NULL; i++) {
